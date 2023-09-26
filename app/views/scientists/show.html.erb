@@ -7,5 +7,6 @@
 <h3>Current Experiments:</h3>
 
 <% @experiments.each do |experiment| %>
-  <li><%= experiment.name %></li>
+
+  <li><%= experiment.name %> <%= button_to "Remove #{experiment.name}", scientist_scientists_experiment_path(@scientist.id, experiment.id), method: :delete %></li>
 <% end %>
